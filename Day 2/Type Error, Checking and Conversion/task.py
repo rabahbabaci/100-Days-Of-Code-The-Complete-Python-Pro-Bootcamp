@@ -1,1 +1,2 @@
-len(12345)
+length = len(str(12345))
+print(length)
