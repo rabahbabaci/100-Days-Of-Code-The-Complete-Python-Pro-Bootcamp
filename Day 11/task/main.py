@@ -31,9 +31,9 @@ def compare(user_score, comp_score):
     elif user_score == 0:
         return "You win 😎 with a Blackjack!"
     elif user_score > 21:
-        return "You went over. You lose 😭"
+        return "You went over. **BUSTED** You lose 😭"
     elif comp_score > 21:
-        return "Opponent went over. You win 😁"
+        return "Opponent went over **BUSTED** You win 😁"
     elif user_score > comp_score:
         return "You win 🙂"
     else:
@@ -53,7 +53,7 @@ def play_game():
 
     while not game_over:
         print(f"Your cards: {user_cards}, current score: {user_score}")
-        print(f"Computer's first card: {comp_cards[0]} -- {comp_cards}")
+        print(f"Computer's first card: {comp_cards[0]}")
 
         if user_score == 0 or comp_score == 0 or user_score > 21:
             game_over = True
